@@ -1,5 +1,5 @@
 <style type="text/css">
-.custom-navbar{background: #fff; border-bottom: 1px solid #fff; margin-bottom: 0px;}
+.custom-navbar{background: #fff; border:none; margin-bottom: 0px;}
   .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background: #2980b9!important; color: #fff;}
   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{background: #2980b9!important; color: #fff;}
   .dropdown-menu>li>a{padding: 10px!important;}
