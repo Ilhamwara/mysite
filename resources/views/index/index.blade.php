@@ -2,8 +2,10 @@
 
 @section('css')
 <style type="text/css">
-	body{color: #666; font-family: 'Bitter',serif;}
-	p{font-size: 14px; padding: 10px 0px;}
+	body{color: #666; font-family: 'Delius', cursive;}
+	h1,h2,h3,h4,h5,h6{font-weight: bold;}
+	.logo{color: #fff; font-size: 70px;}
+	p{font-size: 18px; padding: 10px 0px; color: #aaa; letter-spacing: 0.2px;}
 	a:hover{text-decoration: none;}
 	.first-section{
 		background:    
@@ -11,7 +13,7 @@
 			rgba(0, 0, 0, 1), 
 			rgba(0, 0, 0, 0.9)
 			),url('{{asset('img/header.jpg')}}');
-		height: 630px;
+		height: 700px;
 		background-repeat: no-repeat;
 		background-position: center;
 		overflow: hidden;
@@ -21,14 +23,14 @@
 		background-size: cover;
 		padding: 150px 0px;
 	}
-	.title-caption{width: 700px; margin: 30px auto; color: #fff; font-size: 16px; letter-spacing: 0.5px;}
-	.gett-started{background:#e53935; color: #fff; padding: 15px; border-radius:3px; font-weight: bold;}
+	.title-caption{width: 700px; margin: 30px auto; color: #fff; font-size: 18px; letter-spacing: 0.5px;}
+	.gett-started{background:#e53935; color: #fff; padding: 15px; border-radius:3px; font-weight: bold; font-size: 17px;}
 	.gett-started:hover{color: #fff; text-decoration: none;}
 	.second-section{overflow: hidden; padding: 80px 0px;}
-	.title > h3{font-size: 45px; padding-bottom: 30px; margin: 0px;}
+	.title > h3{font-size: 45px; padding-bottom: 30px; margin: 0px; font-weight: 900;}
 	.title > h3::before{border-bottom: 2px solid #666;}
 	.third-section{background:#f4f4f4; overflow: hidden; padding: 80px 0px;}
-	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 15px; border-radius:3px; font-weight: bold;}
+	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 15px; border-radius:3px; font-weight: bold; font-size: 17px;}
 	.btn-more:hover{text-decoration: none;color: #fff;}
 	.fourth-section{overflow: hidden; padding: 80px 0px;}
 	.box-img-port{margin-bottom: 20px;}
@@ -51,14 +53,104 @@
 	}
 	.sosmed > li:hover{opacity: 1;}
 	.sosmed > li > a{ font-size: 20px; line-height: 2em; color: rgba(26,26,26,.7);}
+	.hovereffect {
+		width: 100%;
+		height: 100%;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		cursor: default;
+	}
+
+	.hovereffect .overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.6);
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-webkit-transform: translate(460px, -100px) rotate(180deg);
+		-ms-transform: translate(460px, -100px) rotate(180deg);
+		transform: translate(460px, -100px) rotate(180deg);
+		-webkit-transition: all 0.2s 0.4s ease-in-out;
+		transition: all 0.2s 0.4s ease-in-out;
+	}
+
+	.hovereffect img {
+		display: block;
+		position: relative;
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+	}
+
+	.hovereffect h2 {
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		position: relative;
+		font-size: 17px;
+		padding: 10px;
+		background: rgba(0, 0, 0, 0.6);
+	}
+
+	.hovereffect a.info {
+		display: inline-block;
+		text-decoration: none;
+		padding: 7px 14px;
+		text-transform: uppercase;
+		color: #fff;
+		border: 1px solid #fff;
+		margin: 50px 0 0 0;
+		background-color: transparent;
+		-webkit-transform: translateY(-200px);
+		-ms-transform: translateY(-200px);
+		transform: translateY(-200px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.hovereffect a.info:hover {
+		box-shadow: 0 0 5px #fff;
+	}
+
+	.hovereffect:hover .overlay {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+		-webkit-transform: translate(0px, 0px);
+		-ms-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+
+	.hovereffect:hover h2 {
+		-webkit-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-transition-delay: 0.5s;
+		transition-delay: 0.5s;
+	}
+
+	.hovereffect:hover a.info {
+		-webkit-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		transform: translateY(0px);
+		-webkit-transition-delay: 0.3s;
+		transition-delay: 0.3s;
+	}
+	.footer-section{overflow: hidden; padding: 40px 0px; background: #1f1f1f; color: #aaa;}
 </style>
 @endsection
 
 @section('content')
 @include('include.topbar')
-<section class="first-section">
+<section class="first-section" id="home">
 	<div class="col-md-12 text-center">
-		<img src="{{asset('img/logo-white.svg')}}" style="width: 300px;" class="wow fadeInDown">
+		<div class="logo wow fadeInDown"><b>IWAR</b></div>
 		<p class="title-caption">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -66,24 +158,24 @@
 			consequat.
 		</p>
 		<br>
-		<a href="" class="gett-started">Getting Started</a>
+		<a href="#about" class="gett-started">Getting Started</a>
 	</div>	
 </section>
-<section class="second-section">
+<section class="second-section" id="about">
 	<div class="col-md-12">
 		<div class="title text-center wow fadeInDown">
 			<h3>Who we are?</h3>
 		</div>
 	</div>
 	<div class="col-md-12">
-		<div class="col-md-6 text-center">
-			<img src="{{asset('img/about.jpg')}}" width="600" class="img-responsive">
+		<div class="col-md-7 text-center">
+			<img src="{{asset('img/about.jpg')}}" class="img-responsive">
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<div class="wow fadeInRight">
-				<h3>Powerfull Simple Project <br> Management</h3>
+				<h3><b>Powerfull Simple Project <br> Management</b></h3>
 			</div>
-			<p class="wow fadeInRight">
+			<p class="wow fadeInRight" style="width: 400px;">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -94,7 +186,7 @@
 		</div>
 	</div>
 </section>
-<section class="third-section">
+<section class="third-section" id="service">
 	<div class="col-md-12">
 		<div class="title text-center wow fadeInDown">
 			<h3>Service</h3>
@@ -106,9 +198,7 @@
 			<h4>Website</h4>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				tempor incididunt ut labore et dolore magna aliqua.
 			</p>
 		</div>
 		<div class="col-md-3 text-center">
@@ -116,9 +206,7 @@
 			<h4>Android</h4>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				tempor incididunt ut labore et dolore magna aliqua. 
 			</p>
 		</div>
 		<div class="col-md-3 text-center">
@@ -126,183 +214,25 @@
 			<h4>IOS</h4>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				tempor incididunt ut labore et dolore magna aliqua.
 			</p>
 		</div>
 	</div>
 </section>
-<section class="fourth-section">
+<section class="fourth-section" id="portfolio">
 	<div class="col-md-12">
 		<div class="title text-center wow fadeInDown">
 			<h3>Portfolio</h3>
 		</div>
 	</div>
-	<style type="text/css">
-		.hovereffect {
-			width: 100%;
-			height: 100%;
-			float: left;
-			overflow: hidden;
-			position: relative;
-			text-align: center;
-			cursor: default;
-		}
-
-		.hovereffect .overlay {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			overflow: hidden;
-			top: 0;
-			left: 0;
-			background-color: rgba(0,0,0,0.6);
-			opacity: 0;
-			filter: alpha(opacity=0);
-			-webkit-transform: translate(460px, -100px) rotate(180deg);
-			-ms-transform: translate(460px, -100px) rotate(180deg);
-			transform: translate(460px, -100px) rotate(180deg);
-			-webkit-transition: all 0.2s 0.4s ease-in-out;
-			transition: all 0.2s 0.4s ease-in-out;
-		}
-
-		.hovereffect img {
-			display: block;
-			position: relative;
-			-webkit-transition: all 0.2s ease-in;
-			transition: all 0.2s ease-in;
-		}
-
-		.hovereffect h2 {
-			text-transform: uppercase;
-			color: #fff;
-			text-align: center;
-			position: relative;
-			font-size: 17px;
-			padding: 10px;
-			background: rgba(0, 0, 0, 0.6);
-		}
-
-		.hovereffect a.info {
-			display: inline-block;
-			text-decoration: none;
-			padding: 7px 14px;
-			text-transform: uppercase;
-			color: #fff;
-			border: 1px solid #fff;
-			margin: 50px 0 0 0;
-			background-color: transparent;
-			-webkit-transform: translateY(-200px);
-			-ms-transform: translateY(-200px);
-			transform: translateY(-200px);
-			-webkit-transition: all 0.2s ease-in-out;
-			transition: all 0.2s ease-in-out;
-		}
-
-		.hovereffect a.info:hover {
-			box-shadow: 0 0 5px #fff;
-		}
-
-		.hovereffect:hover .overlay {
-			opacity: 1;
-			filter: alpha(opacity=100);
-			-webkit-transition-delay: 0s;
-			transition-delay: 0s;
-			-webkit-transform: translate(0px, 0px);
-			-ms-transform: translate(0px, 0px);
-			transform: translate(0px, 0px);
-		}
-
-		.hovereffect:hover h2 {
-			-webkit-transform: translateY(0px);
-			-ms-transform: translateY(0px);
-			transform: translateY(0px);
-			-webkit-transition-delay: 0.5s;
-			transition-delay: 0.5s;
-		}
-
-		.hovereffect:hover a.info {
-			-webkit-transform: translateY(0px);
-			-ms-transform: translateY(0px);
-			transform: translateY(0px);
-			-webkit-transition-delay: 0.3s;
-			transition-delay: 0.3s;
-		}
-		Close
-
-	</style>
 	<div class="col-md-12">
 		<div class="col-md-3">
 			<div class="box-img-port hovereffect">
 				<img src="{{asset('img/pict.jpg')}}" width="300">
 				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#"><i class="fa fa-zoom"></i></a>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/pict.jpg')}}" width="300">
-				<div class="overlay">
-					<h2>Judul</h2>
-					<a class="info" href="#">link here</a>
+					<h2>OJWAY</h2>
+					<a class="info" href="#"><i class="fa fa-eye"></i></a>
+					<a class="info" href="http://ojkway.ojk.go.id" target="_blank"><i class="fa fa-globe"></i></a>
 				</div>
 			</div>
 		</div>
@@ -364,10 +294,18 @@
 		</div>
 	</div>
 </section> -->
-
-<style type="text/css">
-	.footer-section{overflow: hidden; padding: 40px 0px; background: #1f1f1f; color: #aaa;}
-</style>
+<section id="contact" style="overflow: hidden; padding: 80px 0px; background:#f4f4f4;">
+	<div class="col-md-12">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+</section>
 <section class="footer-section">
 	<div class="col-md-12 text-center">
 		<ul class="sosmed wow bounceInDown">
@@ -402,5 +340,18 @@
 @endsection
 
 @section('js')
-
+<script type="text/javascript">
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+</script>
 @endsection
