@@ -17,6 +17,5 @@ Route::get('/','HomeController@index');
 Route::get('template','TemplateController@index');
 Route::get('template/detail/{id}','TemplateController@detail');
 Route::get('template/loadmore/{take?}/{skip?}','TemplateController@loadmore');
+Route::get('portfolio/loadmore/{take?}/{skip?}','TemplateController@loadmoreportfolio');
 
-//PORTFOLIO
-Route::get('portfolio/loadmore/{take?}/{skip?}','PortfolioController@loadmore');

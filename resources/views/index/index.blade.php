@@ -20,47 +20,25 @@ linear-gradient(
 			consequat.
 		</p>
 		<br>
-		<a href="#about" class="gett-started">Getting Started</a>
+		<a href="#portfolio" class="gett-started">Getting Started</a>
 	</div>	
 </section>
-<section class="second-section" id="about">
+<section class="second-section" id="portfolio">
 	<div class="container">
 		<div class="col-md-12">
 			<div class="title text-center wow fadeInDown">
-				<h3>Who we are?</h3>
+				<h3>Powerfully responsive template</h3>
 			</div>
 		</div>
-		<div class="col-md-12">
-			<div class="col-md-7 text-center">
-				<img src="{{asset('img/about.jpg')}}" class="img-responsive">
-			</div>
-			<div class="col-md-5" style="padding: 0px 40px;">
-				<div class="wow fadeInRight">
-					<h3><b>Powerfull Simple Project <br> Management</b></h3>
-				</div>
-				<p class="wow fadeInRight">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="third-section" id="service">
-	<div class="container">
 		<div class="col-md-12" id="containernya">
-			@foreach($portfolio as $data)
-			<div class="col-md-4">
+			@foreach($template as $data)
+			<div class="col-md-6">
 				<div class="box-img-port hovereffect">
-					<img src="{{asset('img/'.$data->gambar)}}" width="300">
+					<img src="{{asset('img/'.$data->gambar)}}" class="img-responsive">
 					<div class="overlay">
 						<h2>{{$data->nama}}</h2>
-						<a class="info" href="{{url('portfolio/detail/'.$data->id)}}"><i class="fa fa-eye"></i></a>
-						<a class="info" href="{{$data->link}}" target="_blank"><i class="fa fa-globe"></i></a>
+						<a class="info" href="{{url('template/detail/'.$data->id)}}">Detail</a>
+						<a class="info" href="{{$data->link}}" target="_blank">Demo</a>
 					</div>
 				</div>
 			</div>
@@ -68,7 +46,7 @@ linear-gradient(
 		</div>
 		<div class="col-md-12 text-center wow bounceInDown">
 			<br>
-			<button class="btn-more" onclick="loadmore(3,6)" id="loadMore" style="border: none;">See More
+			<button class="btn-more" onclick="loadmore(4,6)" id="loadMore" style="border: none;">See More
 			</button>
 		</div>
 
@@ -95,6 +73,77 @@ linear-gradient(
 			<div class="col-md-6 wow fadeInRight">
 				<img src="{{asset('img/laptop2.svg')}}" width="500" class="img-responsive">
 			</div>
+		</div>
+	</div>
+</section>
+<section class="third-section">
+	<div class="container">
+		<div class="text-center wow fadeInDown">
+			<h1>Creative design is a money</h1>
+		</div>
+	</div>
+</section>
+<section class="fourth-section" id="service">
+	<div class="container">
+		<div class="col-md-4 text-center">
+			<i class="fa fa-font-awesome fa-5x"></i>
+			<h4>Fontawesome</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-google fa-5x"></i>
+			<h4>Google Font</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-code fa-5x"></i>
+			<h4>Code</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-laptop fa-5x"></i>
+			<h4>Backend Developer</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-html5 fa-5x"></i>
+			<h4>Responsive Design</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
+		</div>
+		<div class="col-md-4 text-center">
+			<i class="fa fa-lightbulb-o fa-5x"></i>
+			<h4>Design Inspiration</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
 		</div>
 	</div>
 </section>
@@ -127,9 +176,9 @@ linear-gradient(
 					if($.isArray(response.data.post)){
 						$.each(response.data.post, function(key, value){
 							var pender = 
-							'<div class="col-md-4">'+
+							'<div class="col-md-6">'+
 							'<div class="box-img-port hovereffect">'+
-							'<img src="{{asset('img')}}/'+value.gambar+'" width="300">'+
+							'<img src="{{asset('img')}}/'+value.gambar+'" class="img-responsive">'+
 							'<div class="overlay">'+
 							'<h2>'+value.nama+'</h2>'+
 							'<a class="info" style="margin-right:5px;" href="{{url('portfolio/detail')}}/'+value.id+'">'+
@@ -143,7 +192,7 @@ linear-gradient(
 							$('#containernya').append(pender);
 						});
 					}
-					skip = skip + 3;
+					skip = skip + 4;
 					$('#loadMore').attr('onclick', 'loadmore('+take+','+skip+')');
 					if ($.isArray(response.data.post) == '0') {
 						$('#loadMore').hide();

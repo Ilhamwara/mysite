@@ -2,7 +2,6 @@
 @section('css')
 <style type="text/css">
 	.template-section{
-		padding: 100px 0px;
 		overflow: hidden;
 	}
 </style>
@@ -10,24 +9,32 @@
 @section('content')
 @include('include.topbar2')
 <section class="template-section">
-	<div class="container" id="containernya">
-		@foreach($template as $datanya)
-		<div class="col-md-4">
-			<div class="box-img-port hovereffect">
-				<img src="{{asset('img/'.$datanya->gambar)}}" width="300">
-				<div class="overlay">
-					<h2>{{$datanya->nama}}</h2>
-					<a class="info" href="{{url('template/detail/'.$datanya->id)}}"><i class="fa fa-eye"></i></a>
-					<a class="info" href="{{$datanya->link}}" target="_blank"><i class="fa fa-globe"></i></a>
-				</div>
+	<div class="col-md-12 header-title">
+		<div class="container">
+			<div class="wow fadeInDown">
+				<h2>The beauty of the design <br> make you satisfied</h2>
 			</div>
 		</div>
-		@endforeach
 	</div>
-	<div class="col-md-12 text-center">
-		<br><br>
+	<div class="container">
+		<div class="col-md-12" style="padding-top: 70px;" id="containernya">
+			@foreach($template as $datanya)
+			<div class="col-md-4">
+				<div class="box-img-port hovereffect">
+					<img src="{{asset('img/'.$datanya->gambar)}}" class="img-responsive" style="height: 300px!important;">
+					<div class="overlay">
+						<h2 style="font-size: 22px!important;">{{$datanya->nama}}</h2>
+						<a class="info" href="{{url('template/detail/'.$datanya->id)}}">Detail</a>
+						<a class="info" href="{{$datanya->link}}" target="_blank">Demo</a>
+					</div>
+				</div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+	<div class="col-md-12 text-center" style="padding-bottom:20px;">
 		<button class="btn-more" onclick="loadmore(3,6)" id="loadMore" style="border: none;">
-		See More
+			See More
 		</button>
 	</div>
 </div>
@@ -54,9 +61,9 @@
 							var pender = 
 							'<div class="col-md-4">'+
 							'<div class="box-img-port hovereffect">'+
-							'<img src="{{asset('img')}}/'+value.gambar+'" width="300">'+
+							'<img src="{{asset('img')}}/'+value.gambar+'" style="height: 300px!important;">'+
 							'<div class="overlay">'+
-							'<h2>'+value.nama+'</h2>'+
+							'<h2 style="font-size: 22px!important;">'+value.nama+'</h2>'+
 							'<a class="info" style="margin-right:5px;" href="{{url('template/detail')}}/'+value.id+'">'+
 							'<i class="fa fa-eye"></i></a>'+
 							'<a class="info" href="'+value.link+'" target="_blank">'+

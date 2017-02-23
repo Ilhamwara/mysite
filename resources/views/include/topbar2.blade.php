@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default custom-navbar navbar-fixed-top">
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top" style="border: none;">
   <div class="container-fluid" style="max-width:1000px; ">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,9 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{url('/')}}" class="logo-bar navbar-brand">
-        <b>iWar</b>
-      </a>
+      <ul class="nav navbar-nav">
+        <li>
+        <a href="{{url('/')}}" class="logo-bar navbar-brand" style="padding: 5px;">
+            <img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle" width="40"> 
+          </a>
+        </li>
+        <li>
+          <a href="{{url('/')}}"><b>iWar</b></a>
+        </li>
+      </ul>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

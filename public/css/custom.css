@@ -21,13 +21,21 @@
 	.gett-started:hover{color: #fff; text-decoration: none;}
 	.second-section{overflow: hidden; padding: 80px 0px;}
 	.title > h3{font-size: 40px; padding-bottom: 50px; margin: 0px; font-weight: 900;}
-	.third-section{background:#fff; overflow: hidden; padding: 80px 0px;}
-	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 15px; border-radius:3px; font-weight: bold; font-size: 17px;}
-	.btn-contact{margin:10px 0px;background:#fff; color: #666; padding: 15px; border-radius:3px; font-weight: bold; font-size: 17px;}
+	.third-section{
+		overflow: hidden; 
+		padding: 40px 0px; 
+		background: linear-gradient(
+			rgba(241, 196, 15,1.0),
+			rgba(241, 196, 15,1.0)
+			); 
+		color: #fff;
+	}
+	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 10px; border-radius:3px; font-weight: bold;}
+	.btn-contact{margin:10px 0px;background:#fff; color: #666; padding: 10px; border-radius:3px; font-weight: bold;}
 	.btn-more:hover{text-decoration: none;color: #fff;}
 	.btn-contact:hover{text-decoration: none;color: #666;}
-	.fourth-section{overflow: hidden; padding: 80px 0px; background:#f4f4f4;}
-	.box-img-port{margin-bottom: 20px;}
+	.fourth-section{overflow: hidden; padding: 80px 0px; background:#fff;}
+	.box-img-port{margin-bottom: 50px;}
 	.fifth-section{overflow: hidden; background:#f4f4f4; padding: 60px 0px;}
 	.sixth-section{overflow: hidden; background:#333; padding: 40px 0px; color: #fff;}
 	.btn-primary-own{background: #2ecc71; color: #fff; padding: 15px 20px; font-weight: bold; border-radius: 3px; margin: 0px 5px;}
@@ -55,6 +63,7 @@
 		position: relative;
 		text-align: center;
 		cursor: default;
+		box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11);
 	}
 
 	.hovereffect .overlay {
@@ -64,7 +73,7 @@
 		overflow: hidden;
 		top: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.6);
+		background-color: rgba(0,0,0,0.9);
 		opacity: 0;
 		filter: alpha(opacity=0);
 		-webkit-transform: translate(460px, -100px) rotate(180deg);
@@ -76,6 +85,10 @@
 
 	.hovereffect img {
 		display: block;
+		height: 283.33px; 
+		width: 100%; 
+		max-width: 100%; 
+		max-height: 100%;
 		position: relative;
 		-webkit-transition: all 0.2s ease-in;
 		transition: all 0.2s ease-in;
@@ -84,31 +97,34 @@
 	.hovereffect h2 {
 		text-transform: uppercase;
 		color: #fff;
+		margin:100px 0 0 0;
 		text-align: center;
 		position: relative;
-		font-size: 17px;
+		font-size: 20px;
 		padding: 10px;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 1);
 	}
 
 	.hovereffect a.info {
 		display: inline-block;
 		text-decoration: none;
-		padding: 7px 14px;
+		padding: 10px 20px;
+		font-weight: bold;
 		text-transform: uppercase;
-		color: #fff;
+		color: #666;
 		border: 1px solid #fff;
-		margin: 50px 0 0 0;
-		background-color: transparent;
+		margin: 0px 0 0 0;
+		background-color: #fff;
 		-webkit-transform: translateY(-200px);
 		-ms-transform: translateY(-200px);
 		transform: translateY(-200px);
-		-webkit-transition: all 0.2s ease-in-out;
-		transition: all 0.2s ease-in-out;
 	}
 
 	.hovereffect a.info:hover {
-		box-shadow: 0 0 5px #fff;
+
+		background-color: #3498db;
+		border: 1px solid #3498db;
+		color: #fff;
 	}
 
 	.hovereffect:hover .overlay {
@@ -132,13 +148,13 @@
 	.hovereffect:hover a.info {
 		-webkit-transform: translateY(0px);
 		-ms-transform: translateY(0px);
-		transform: translateY(0px);
-		-webkit-transition-delay: 0.3s;
-		transition-delay: 0.3s;
+		transform: translateY(50px);
+		-webkit-transition: 0.1s;
+		transition: 0.1s;
 	}
 	.footer-section{overflow: hidden; padding: 40px 0px; background: #1f1f1f; color: #aaa;}
 	#contact{
-		overflow: hidden; padding: 80px 0px; background:rgba(0, 0, 0, 0.8);
+		overflow: hidden; padding: 80px 0px; background:rgba(26, 188, 156,1.0);
 	}
 	#template{overflow: hidden; padding: 80px 0px;}
 	.custom-navbar{background: #fff; border:none; margin-bottom: 0px; margin: auto; clear: both; border-bottom:1px solid #fafafa;}
@@ -150,3 +166,18 @@
 	.logo-bar{color: #fff; font-size: 20px;}
 	.navbar-nav > li > a{font-weight: 900; font-size: 14px;}
 	.navbar-nav > li > a:hover{cursor: pointer;}
+
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		border: none;
+	}
+	.btn-purchase{padding: 7px 15px; background: #34495e; color: #fff; transition: .3s all;}
+	.btn-demo{padding: 7px 15px; background: #1abc9c; color: #fff; transition: .3s all;}
+	.btn-purchase:hover{color: #fff; cursor: pointer; background: #2c3e50;}
+	.btn-demo:hover{color: #fff; cursor: pointer; background: #16a085;}
+	.btn-demo:visited{color: #fff;}
+	.btn-purchase:visited{color: #fff;}
+	a:visited{text-decoration: none;}
+	a:link{text-decoration: none;}
+	.header-title{background:linear-gradient(#fff,#f4f4f4); padding: 50px; color: #666;}
+	.template-section{overflow: hidden;}
+	.panel-default{box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11); border: none;}

@@ -8,19 +8,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#home" class="logo-bar navbar-brand">
-        <b>iWar</b>
-      </a>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#home" class="logo-bar navbar-brand" style="padding: 5px;">
+            <img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle" width="40"> 
+          </a>
+        </li>
+        <li>
+          <a href=""><b>iWar</b></a>
+        </li>
+      </ul>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="pull-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      @if(url('/'))
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#template">Template</a></li>
+        @if(url('/'))
+        <!-- <li><a href="#about">About</a></li> -->
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#template">Template</a></li>
+        <li><a href="#service">Service</a></li>
         <li><a href="#contact">Contact</a></li>
         @else
         @endif
