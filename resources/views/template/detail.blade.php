@@ -16,7 +16,7 @@
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<img src="{{asset('img/'.$data->gambar_full)}}" class="img-responsive">
+						<img src="{{asset('img/template/'.$data->gambar_full)}}" class="img-responsive">
 						<br><br>
 						<div class="col-md-12">
 							<h3>{{$data->nama}}</h3>
@@ -26,9 +26,9 @@
 									{{date('d-M-y', strtotime($data->created_at))}}
 								</small>
 							</i>
-							<p>
-								{{$data->deskripsi}}
-							</p>
+							<div>
+								{!!$data->deskripsi!!}
+							</div>
 						</div>
 					</div>
 				</div>

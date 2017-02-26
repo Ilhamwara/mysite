@@ -9,8 +9,8 @@
   <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet"> -->
   <link href="{{asset('css/MontserratFont.css')}}" rel="stylesheet">
+  <link href="{{asset('css/cocogoose.css')}}" rel="stylesheet">
   @yield('css')
 </head>
 <body>

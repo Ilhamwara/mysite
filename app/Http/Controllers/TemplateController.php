@@ -6,6 +6,9 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
+use Response;
+use Session;
 use App\Template;
 
 class TemplateController extends BaseController
@@ -43,7 +46,7 @@ class TemplateController extends BaseController
 		return response()->json(['status' => true, 'data' => $data, 'message' => ''], 200);
 	}
 
-		public function loadmoreportfolio($take = 3, $skip = 0)
+	public function loadmoreportfolio($take = 3, $skip = 0)
 	{
 		$data=[];
 		if($take != null && is_int($take)){
@@ -64,5 +67,44 @@ class TemplateController extends BaseController
 			}
 		}
 		return response()->json(['status' => true, 'data' => $data, 'message' => ''], 200);
+	}
+	public function tambah()
+	{
+		return view('template.tambah');
+	}
+	public function prosestambah(Request $r)
+	{
+		
+		$extfile 	= $r->file('gambar')->getClientOriginalExtension();
+		
+		// dd($extfile);
+		$template = new Template;
+		$template->nama = $r->nama;
+		$template->deskripsi = $r->deskripsi;
+		$template->type = $r->type;
+		$template->harga = $r->harga;
+		if((strpos($r->link, 'http://') !== false) OR (strpos($r->link, 'https://') !== false)){
+			$template->link = $r->link;
+		}
+		else{
+			return redirect()->back()->with('error', 'Link anda bukan termasuk link site');
+		}
+
+		if(($extfile == 'svg') || ($extfile == 'jpg') || ($extfile == 'jpeg') || ($extfile == 'png') ){
+			if ($r->hasFile('gambar') && $r->hasFile('gambar_full') ) {
+				$gambar = date('d-m-y').'-'.$r->nama.'.'.$r->file('gambar')->getClientOriginalExtension();
+				$gambar_full = date('d-m-y').'-'.$r->nama.'_full.'.$r->file('gambar_full')->getClientOriginalExtension();
+				$r->file('gambar')->move(realpath(public_path("img/template/")), $gambar);
+				$r->file('gambar_full')->move(realpath(public_path("img/template/")), $gambar_full);
+				$template->gambar 		= $gambar;
+				$template->gambar_full 	= $gambar_full;
+			}			
+		}
+		else{
+			return redirect()->back()->with('error', 'Format yang anda masukan bukan gambar');
+		}
+
+		$template->save();
+		return redirect()->back();
 	}
 }

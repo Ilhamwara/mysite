@@ -5,23 +5,31 @@
 
 @section('content')
 @include('include.topbar')
-<section class="first-section" id="home" style="background:    
-linear-gradient(
-	rgba(0, 0, 0, 1), 
-	rgba(0, 0, 0, 0.9)
-	),url('{{asset('img/header.jpg')}}');">
+<section class="first-section" id="home">
 	<div class="col-md-12 text-center">
 		<div class="logo wow fadeInDown"><b>Imagination & Creativity</b></div>
 		<h2 class="wow fadeInDown">Good design is a good business</h2>
 		<p class="title-caption">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.
+			Web design is performed by an IT professional who use computer programming language (HTML or JavaScript). The art of web designing is very difficult and it takes years of hard work to master it fully. To craft an aesthetically pleasing web resource with excellent usability a web designer needs to play around with code for quite a white, and finally come up with the perfect look by trial and error.
 		</p>
 		<br>
 		<a href="#portfolio" class="gett-started">Getting Started</a>
 	</div>	
+</section>
+<section class="" id="about" style="background-color: #3498db; overflow: hidden; padding:20px 0px;">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="col-md-6 pull-right">
+				<img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle text-right" width="140">
+			</div>
+			<div class="col-md-6" style="color: #fff!important;">
+				<h3>Hello and welcome to my page!</h3>
+				<p style="color: #fff!important;">
+					Each web design that we produce is one-of-a-kind. Every new client is guaranteed to leave satisfied and inspired. Every new design is a masterpiece that is specifically created to reveal your business atmosphere.
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 <section class="second-section" id="portfolio">
 	<div class="container">
@@ -34,7 +42,7 @@ linear-gradient(
 			@foreach($template as $data)
 			<div class="col-md-6">
 				<div class="box-img-port hovereffect">
-					<img src="{{asset('img/'.$data->gambar)}}" class="img-responsive">
+					<img src="{{asset('img/template/'.$data->gambar)}}" class="img-responsive">
 					<div class="overlay">
 						<h2>{{$data->nama}}</h2>
 						<a class="info" href="{{url('template/detail/'.$data->id)}}">Detail</a>
@@ -60,10 +68,7 @@ linear-gradient(
 					<h2>Template</h2>
 				</div>
 				<p class="wow fadeInLeft">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.
+					Select the template you want here, the best design will be our erikan here for your satisfaction.
 				</p>
 				<br>
 				<div class="wow fadeInLeft">
@@ -89,60 +94,42 @@ linear-gradient(
 			<i class="fa fa-font-awesome fa-5x"></i>
 			<h4>Fontawesome</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Using fontawesome icon to make your website look more attractive.
 			</p>
 		</div>
 		<div class="col-md-4 text-center">
 			<i class="fa fa-google fa-5x"></i>
 			<h4>Google Font</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Font selection is good, the most important thing that affects your design template.
 			</p>
 		</div>
 		<div class="col-md-4 text-center">
 			<i class="fa fa-code fa-5x"></i>
 			<h4>Code</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Code is neat template allows you to develop this even easier
 			</p>
 		</div>
 		<div class="col-md-4 text-center">
-			<i class="fa fa-laptop fa-5x"></i>
-			<h4>Backend Developer</h4>
+			<i class="fa fa-eyedropper fa-5x"></i>
+			<h4>Color</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Selection of the right color for your website content is very important, must be combined with the theme of your website
 			</p>
 		</div>
 		<div class="col-md-4 text-center">
 			<i class="fa fa-html5 fa-5x"></i>
 			<h4>Responsive Design</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Responsive display allows us to interact with apps, UI / UX highly in precedence in this case
 			</p>
 		</div>
 		<div class="col-md-4 text-center">
 			<i class="fa fa-lightbulb-o fa-5x"></i>
 			<h4>Design Inspiration</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
+				Realize all your ideas with us. we will give you a good design for you.
 			</p>
 		</div>
 	</div>
@@ -178,7 +165,7 @@ linear-gradient(
 							var pender = 
 							'<div class="col-md-6">'+
 							'<div class="box-img-port hovereffect">'+
-							'<img src="{{asset('img')}}/'+value.gambar+'" class="img-responsive">'+
+							'<img src="{{asset('img')}}/template/'+value.gambar+'" class="img-responsive">'+
 							'<div class="overlay">'+
 							'<h2>'+value.nama+'</h2>'+
 							'<a class="info" style="margin-right:5px;" href="{{url('portfolio/detail')}}/'+value.id+'">'+

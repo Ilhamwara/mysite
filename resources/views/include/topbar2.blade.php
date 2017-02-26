@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <ul class="nav navbar-nav">
+     <!--  <ul class="nav navbar-nav">
         <li>
         <a href="{{url('/')}}" class="logo-bar navbar-brand" style="padding: 5px;">
             <img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle" width="40"> 
@@ -17,16 +17,20 @@
         <li>
           <a href="{{url('/')}}"><b>iWar</b></a>
         </li>
+      </ul> -->
+      <ul class="nav navbar-nav">
+        <li><a href="{{url('/')}}">Home</a></li>
+        <li><a href="{{url('template')}}">Template</a></li>
       </ul>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="pull-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!-- <div class="pull-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{url('template')}}">Template</a></li>
         <li><a href="{{url('portfolio')}}">Portfolio</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div> -->
   </div><!-- /.container-fluid -->
 </nav>
 
