@@ -9,7 +9,7 @@
 		linear-gradient(
 			rgba(0, 0, 0, 0.9), 
 			rgba(0, 0, 0, 0.7)
-			),url('../img/desk.jpg')no-repeat;
+			),url('../img/lamp.jpeg')no-repeat;
 		background-position: center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -17,13 +17,14 @@
 		background-size: cover;
 		color: #fff;
 		overflow: hidden;
-		padding: 180px 0px;
+		padding: 155px 0px;
+		background-attachment: fixed;
 	}
 	.title-caption{width: 700px; margin: 30px auto; color: #fff; font-size: 18px; letter-spacing: 0.5px; opacity: 0.5;}
-	.gett-started{background:#e53935; color: #fff; padding: 15px; border-radius:3px; font-weight: bold; font-size: 17px;}
+	.gett-started{background:#1abc9c; color: #fff; padding: 20px;font-weight: bold; font-size: 17px;}
 	.gett-started:hover{color: #fff; text-decoration: none;}
 	.second-section{overflow: hidden; padding: 80px 0px;}
-	.title > h3{font-size: 40px; padding-bottom: 50px; margin: 0px; font-weight: 900;}
+	.title > h3{font-size: 35px; padding-bottom: 50px; margin: 0px; font-weight: 900;}
 	.third-section{
 		overflow: hidden; 
 		padding: 40px 0px; 
@@ -33,8 +34,8 @@
 			); 
 		color: #fff;
 	}
-	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 10px; border-radius:3px; font-weight: bold;}
-	.btn-contact{margin:10px 0px;background:#fff; color: #666; padding: 10px; border-radius:3px; font-weight: bold;}
+	.btn-more{margin:10px 0px;background:#2ecc71; color: #fff; padding: 15px; font-weight: bold;}
+	.btn-contact{margin:10px 0px;background:#fff; color: #666; padding: 15px; font-weight: bold;}
 	.btn-more:hover{text-decoration: none;color: #fff;}
 	.btn-contact:hover{text-decoration: none;color: #666;}
 	.fourth-section{overflow: hidden; padding: 80px 0px; background:#fff;}
@@ -76,7 +77,7 @@
 		overflow: hidden;
 		top: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.9);
+		background-color: rgba(0,0,0,0.7);
 		opacity: 0;
 		filter: alpha(opacity=0);
 		-webkit-transform: translate(460px, -100px) rotate(180deg);
@@ -105,7 +106,7 @@
 		position: relative;
 		font-size: 20px;
 		padding: 10px;
-		background: rgba(0, 0, 0, 1);
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	.hovereffect a.info {
@@ -160,15 +161,17 @@
 		overflow: hidden; padding: 80px 0px; background:rgba(26, 188, 156,1.0);
 	}
 	#template{overflow: hidden; padding: 80px 0px;}
-	.custom-navbar{background: #fff; border:none; margin-bottom: 0px; margin: auto; clear: both; border-bottom:1px solid #fafafa;}
-	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background: #2980b9!important; color: #fff;}
-	.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{background: #2980b9!important; color: #fff;}
+	.navbar-nav > li > a{font-weight: 900; font-size: 14px; color: #fff!important; margin: 0px 5px;}
+	.navbar-nav > li > a:hover{cursor: pointer; color: #fff;}
+	.custom-navbar{background: transparent; border:none; margin-bottom: 0px; padding: 10px; margin: auto; clear: both;}	
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background: #2980b9!important; color: #fff!important;}
+	.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{background: #2980b9!important; color: #fff!important;}
 	.dropdown-menu>li>a{padding: 10px!important;}
 	.dropdown-menu>li>a:hover{background: #2980b9!important; color: #fff; }
 	.dropdown-menu{padding: 0px;}
 	.logo-bar{color: #fff; font-size: 20px;}
-	.navbar-nav > li > a{font-weight: 900; font-size: 14px;}
-	.navbar-nav > li > a:hover{cursor: pointer;}
+	.navbar-nav{text-align: center;}
+	
 
 	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
 		border: none;
@@ -184,3 +187,7 @@
 	.header-title{background:linear-gradient(#fff,#f4f4f4); padding: 50px; color: #666;}
 	.template-section{overflow: hidden;}
 	.panel-default{box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11); border: none;}
+
+	#about{
+		background-color: #1abc9c; overflow: hidden; padding:20px 0px;
+	}

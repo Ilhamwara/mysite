@@ -3,7 +3,7 @@
 @endsection
 @section('content')
 @include('include.topbar2')
-<section class="template-section">
+<section class="template-section" style="padding: 30px 0px;">
 	<div class="col-md-12 header-title">
 		<div class="container">
 			<div class="wow fadeInDown">

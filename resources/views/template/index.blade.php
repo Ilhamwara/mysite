@@ -3,6 +3,7 @@
 <style type="text/css">
 	.template-section{
 		overflow: hidden;
+		padding: 30px 0px;
 	}
 </style>
 @endsection

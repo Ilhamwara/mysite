@@ -16,33 +16,36 @@
 		<a href="#portfolio" class="gett-started">Getting Started</a>
 	</div>	
 </section>
-<section class="" id="about" style="background-color: #3498db; overflow: hidden; padding:20px 0px;">
+<section id="about">
 	<div class="container">
 		<div class="col-md-12">
-			<div class="col-md-6 pull-right">
-				<img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle text-right" width="140">
-			</div>
-			<div class="col-md-6" style="color: #fff!important;">
-				<h3>Hello and welcome to my page!</h3>
+			<div class="col-md-6 wow fadeInLeft" style="color: #fff!important;">
+				<h2>Hello and welcome to my page!</h2>
 				<p style="color: #fff!important;">
 					Each web design that we produce is one-of-a-kind. Every new client is guaranteed to leave satisfied and inspired. Every new design is a masterpiece that is specifically created to reveal your business atmosphere.
 				</p>
+			</div>
+			<div class="col-md-6 wow fadeInRight">
+				<img src="{{asset('img/ilham.png')}}" class="img-responsive img-circle text-right" width="170" style="padding-top:13px;margin: auto;">
 			</div>
 		</div>
 	</div>
 </section>
 <section class="second-section" id="portfolio">
-	<div class="container">
+	<div class="">
 		<div class="col-md-12">
 			<div class="title text-center wow fadeInDown">
-				<h3>Powerfully responsive template</h3>
+				<h3>Powerfully responsive site</h3>
 			</div>
 		</div>
 		<div class="col-md-12" id="containernya">
+		<style type="text/css">
+			.hovereffect > img::before, .hovereffect > img::after{box-sizing: inherit;}
+		</style>
 			@foreach($template as $data)
-			<div class="col-md-6">
+			<div class="col-md-4 col-sm-6">
 				<div class="box-img-port hovereffect">
-					<img src="{{asset('img/template/'.$data->gambar)}}" class="img-responsive">
+					<img src="{{asset('img/template/'.$data->gambar)}}" class="img-responsive img-fluid" style="vertical-align: middle!important;">
 					<div class="overlay">
 						<h2>{{$data->nama}}</h2>
 						<a class="info" href="{{url('template/detail/'.$data->id)}}">Detail</a>
@@ -68,7 +71,7 @@
 					<h2>Template</h2>
 				</div>
 				<p class="wow fadeInLeft">
-					Select the template you want here, the best design will be our erikan here for your satisfaction.
+					Select the template you want here, the best design will be our given here for your satisfaction.
 				</p>
 				<br>
 				<div class="wow fadeInLeft">

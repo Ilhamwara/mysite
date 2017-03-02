@@ -25,5 +25,22 @@
     new WOW().init();
   </script>
   @yield('js')
+  <script type="text/javascript">
+      $(document).ready(function(){       
+       var scroll_start = 0;
+       var startchange = $('.first-section');
+       var offset = startchange.offset();
+       if (startchange.length){
+         $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > offset.top) {
+            $(".navbar-default").css('background-color', '#333');
+          } else {
+            $('.navbar-default').css('background-color', 'transparent');
+          }
+        });
+       }
+     });
+ </script>
 </body>
 </html>
