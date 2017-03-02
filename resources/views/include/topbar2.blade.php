@@ -1,12 +1,4 @@
 <style type="text/css">
-  .logo-nav{
-    font-family: 'Cocogoose';
-    font-size: 35px!important;
-    background: -webkit-linear-gradient(#2ecc71,#3498db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 10px;
-  }
   .navbar-default .navbar-toggle{border:none;}
 </style>
 <nav class="navbar navbar-default custom-navbar navbar-fixed-top" id="nav" style="background: #333;">

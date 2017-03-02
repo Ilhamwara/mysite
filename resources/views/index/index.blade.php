@@ -32,7 +32,7 @@
 	</div>
 </section>
 <section class="second-section" id="portfolio">
-	<div class="">
+	<div class="container">
 		<div class="col-md-12">
 			<div class="title text-center wow fadeInDown">
 				<h3>Powerfully responsive site</h3>
