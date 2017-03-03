@@ -199,10 +199,70 @@
 		</div>
 	</div>
 </section>
+<style type="text/css">
+	#contact{
+		overflow: hidden;
+		padding: 80px 0px;
+		/*		background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('{{asset('img/contact.jpeg')}}');*/
+/*		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;*/
+		/*background: #e0efe3;*/
+		background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+		radial-gradient(circle closest-side, #FFFFFF 40%, rgba(255,255,255,0) 0) 0 0,
+		radial-gradient(circle closest-side, #FFFFFF 80%, rgba(255,255,255,0) 0) 55px 0 #f4f4f4;
+		background-size:110px 200px;
+		background-repeat:repeat-x;
+	}
+</style>
 <section id="contact">
 	<div class="container">
-		<div class="text-center wow bounceInDown">
-			<a href="mailto:ilhamwara@gmail.com" class="btn-contact">Contact Me</a>
+		<div class="wow bounceInDown">
+			<div class="panel panel-default" style="box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11)">
+				<div class="panel-body" style="color: #666;">
+					<div class="col-md-12">
+						<h2>Get in touch!</h2>
+						<p>
+							We are here to answer any questions you may have about our company experiences. Reach out to us and we'll respond as soon as we can.
+						</p>
+						<p>
+							Even if there is something you have always wanted to experience and can't find it on company, let us know and we promise we'll do our best to find it for you and send you there.
+						</p>
+					</div>
+					<br>
+					<form>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Name <sup class="text-danger">*</sup></label>
+								<input type="text" class="form-control" placeholder="Your name" required>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Email <sup class="text-danger">*</sup></label>
+								<input type="email" class="form-control" placeholder="Your email" required>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Message <sup class="text-danger">*</sup></label>
+								<textarea class="form-control" rows="10" placeholder="Your messages here"></textarea>
+							</div>
+						</div>
+
+						<style type="text/css">
+							.btn-send{border:none; padding: 15px 20px; background:#3498db; color: #fff; font-weight: bold;}
+							.form-control{background:#f4f4f4; border-radius: 0px; border:none; box-shadow: none;}
+						</style>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<button class="btn-send">Send</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
