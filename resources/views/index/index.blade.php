@@ -1,6 +1,20 @@
 @extends('layout.master')
 
 @section('css')
+<link rel="stylesheet" type="text/css" href="{{asset('css/slick.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/slick-theme.css')}}">
+<style type="text/css">
+	.medpar {
+		margin: 0 auto;
+		width: 100%;
+		overflow: hidden;
+	}
+	.mplist{background: #fff;}
+	.mplist > img {
+		margin: auto;
+	}
+	.client-box > img{width: 150px!important; height: 60px; margin: 45px auto; background-color: #fff;}
+</style>
 @endsection
 
 @section('content')
@@ -39,13 +53,13 @@
 			</div>
 		</div>
 		<div class="col-md-12" id="containernya">
-		<style type="text/css">
-			.hovereffect > img::before, .hovereffect > img::after{box-sizing: inherit;}
-		</style>
+			<style type="text/css">
+				.hovereffect > img::before, .hovereffect > img::after{box-sizing: inherit;}
+			</style>
 			@foreach($template as $data)
 			<div class="col-md-4 col-sm-6">
 				<div class="box-img-port hovereffect">
-					<img src="{{asset('img/template/'.$data->gambar)}}" class="img-responsive img-fluid" style="vertical-align: middle!important;">
+					<img src="{{asset('img/template/'.$data->gambar_full)}}" class="img-responsive img-fluid" style="vertical-align: middle!important;">
 					<div class="overlay">
 						<h2>{{$data->nama}}</h2>
 						<a class="info" href="{{url('template/detail/'.$data->id)}}">Detail</a>
@@ -66,20 +80,27 @@
 <section id="template">
 	<div class="container">
 		<div class="col-md-12">
-			<div class="col-md-6" style="padding: 0px 40px;">
-				<div class="wow fadeInLeft">
-					<h2>Template</h2>
+			<div class="title text-center wow fadeInDown">
+				<h3>Template</h3>
+			</div>
+		</div>
+		<div class="col-md-12 box-template">
+			<div class="col-md-6 text-center" style="padding: 50px ;">
+				<div>
+					<h3>
+						Discover our templates
+					</h3>
 				</div>
-				<p class="wow fadeInLeft">
-					Select the template you want here, the best design will be our given here for your satisfaction.
+				<p>
+					Design is more than aesthetics. It’s more than creative concepts or graphical outputs. It's not just about the visual, it's about how something works.
 				</p>
-				<br>
-				<div class="wow fadeInLeft">
+				<br><br>
+				<div>
 					<a href="{{url('template')}}" class="btn-more">See Template</a>
 				</div>
 			</div>
-			<div class="col-md-6 wow fadeInRight">
-				<img src="{{asset('img/laptop2.svg')}}" width="500" class="img-responsive">
+			<div class="col-md-6" style="padding: 0px;">
+				<img src="{{asset('img/pict.jpg')}}" class="img-responsive" style="border-radius: 0px 5px 5px 0px!important;">
 			</div>
 		</div>
 	</div>
@@ -137,6 +158,47 @@
 		</div>
 	</div>
 </section>
+<section id="client">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="title text-left wow fadeInDown">
+				<h3>Our partner</h3>
+			</div>
+		</div>
+		<div class="medpar" style="height: 230px;">
+			<div class="mplist client-box hovereffect">
+				<img src="{{asset('img/logo/dentsmile.jpg')}}" class="img-responsive">
+				<div class="overlay">
+					<h2>Dentsmile</h2>
+				</div>
+			</div>
+			<div class="mplist client-box hovereffect">
+				<img src="{{asset('img/logo/ramani.jpg')}}" class="img-responsive" style="margin: 15px auto; height: 120px;">
+				<div class="overlay">
+					<h2>Ramani</h2>
+				</div>
+			</div>
+			<div class="mplist client-box hovereffect">
+				<img src="{{asset('img/logo/zanova.png')}}" class="img-responsive">
+				<div class="overlay">
+					<h2>Zanova</h2>
+				</div>
+			</div>
+			<div class="mplist client-box hovereffect">
+				<img src="{{asset('img/logo/mega.png')}}" class="img-responsive">
+				<div class="overlay">
+					<h2>Megaprimatama</h2>
+				</div>
+			</div>
+			<div class="mplist client-box hovereffect">
+				<img src="{{asset('img/logo/ojk.png')}}" class="img-responsive">
+				<div class="overlay">
+					<h2>Ojk</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section id="contact">
 	<div class="container">
 		<div class="text-center wow bounceInDown">
@@ -148,6 +210,45 @@
 @endsection
 
 @section('js')
+<script src="{{asset('js/slick.js')}}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(document).on('ready', function() {
+		setTimeout( function(){
+			$(".medpar").slick({
+				infinite: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+				]
+			});
+		});
+	});
+</script>
 <script type="text/javascript">
 	function loadmore(take, skip) {
 		$.ajax({

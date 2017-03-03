@@ -63,7 +63,7 @@
 
 		position:relative;
 		height:230px;
-		width:300px;
+		/*width:300px;*/
 		margin: 10px;
 		overflow:hidden;
 		/*float: left;*/
@@ -93,7 +93,8 @@
 
 	.hovereffect img {
 		width:300px;
-		height:300px;
+		/*height:300px;*/
+		height: auto;
 		-webkit-transition: all 0.2s ease-in;
 		transition: all 0.2s ease-in;
 	}
@@ -160,7 +161,10 @@
 	#contact{
 		overflow: hidden; padding: 80px 0px; background:rgba(26, 188, 156,1.0);
 	}
-	#template{overflow: hidden; padding: 80px 0px;}
+	#template{overflow: hidden; padding: 80px 0px; background-color: #f4f4f4;}
+	.box-template{
+		background-color: #fff; padding: 0px; border-radius: 5px!important; box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11);
+	}
 	.navbar-nav > li > a{font-weight: 900; font-size: 14px; color: #fff!important; margin: 0px 5px;}
 	.navbar-nav > li > a:hover{cursor: pointer; color: #fff;}
 	.custom-navbar{background: transparent; border:none; margin-bottom: 0px; padding: 10px; margin: auto; clear: both;}	
@@ -197,7 +201,23 @@
 		background: -webkit-linear-gradient(#2ecc71,#3498db);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		border-bottom: 2px solid transparent;
 	}
+	.logo-nav:hover{border-bottom: 2px solid transparent;}
 	.navbar{margin: 0px; padding: 0px; text-align: center;}
-	.navbar > li{display: inline-block; padding: 15px 10px;}
+	.navbar > li{display: inline-block; padding: 15px 10px; border-bottom: 2px solid #fff; transition: .4s all;}
+	.navbar > li:hover{border-bottom: 2px solid #1abc9c;}
 	.navbar > li > a{color: #666; font-weight: bold;}
+
+	#client{
+		padding-top: 40px; overflow: hidden;
+		background-color: #f4f4f4;
+	}
+	.title:after{
+		content: '_';
+		display: block;
+		font-size: 80px;
+		margin-top: -120px;
+		margin-bottom: 20px;
+	}
+	*, *::after{box-sizing: border-box;}

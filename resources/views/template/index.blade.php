@@ -41,7 +41,7 @@
 
 	<div class="col-md-12" style="box-shadow: 0 0.1px 10px 0 rgba(0, 0, 0, 0.1)">
 		<ul class="navbar" id="filters">
-			<li><a href="{{url('/')}}" class="logo-nav"><b>ITCG</b></a></li>
+			<li class="logo-nav"><a href="{{url('/')}}"><b>ITCG</b></a></li>
 			<li>
 				<a href="#all" class="filter active" data-filter=".pers, .comp, .trav, .admin, .ac">
 					All Template
@@ -92,12 +92,14 @@
 			
 
 			@foreach($template as $datanya)
-			<div class="col-md-4">
+			<div class="col-md-4 portfolio {{$datanya->type}}" data-cat="{{$datanya->type}}">
 				<div class="box-img-port hovereffect">
-					<img src="{{asset('img/'.$datanya->gambar)}}" class="img-responsive" style="height: 300px!important;">
+					<img src="{{asset('img/template/'.$datanya->gambar)}}" class="img-responsive">
 					<div class="overlay">
-						<h2 style="font-size: 22px!important;">{{$datanya->nama}}</h2>
-						<a class="info" href="{{url('template/detail/'.$datanya->id)}}">Detail</a>
+						<h2>{{$datanya->nama}}</h2>
+						<a class="info" href="{{url('template/detail/'.$datanya->id)}}">
+							Detail
+						</a>
 						<a class="info" href="{{$datanya->link}}" target="_blank">Demo</a>
 					</div>
 				</div>
@@ -134,11 +136,11 @@
 					if($.isArray(response.data.post)){
 						$.each(response.data.post, function(key, value){
 							var pender = 
-							'<div class="col-md-4">'+
+							'<div class="col-md-4 portfolio'+value.type+'" data-cat="'+value.type+'">'+
 							'<div class="box-img-port hovereffect">'+
-							'<img src="{{asset('img')}}/'+value.gambar+'" style="height: 300px!important;">'+
+							'<img src="{{asset('img')}}/template/'+value.gambar+'">'+
 							'<div class="overlay">'+
-							'<h2 style="font-size: 22px!important;">'+value.nama+'</h2>'+
+							'<h2>'+value.nama+'</h2>'+
 							'<a class="info" style="margin-right:5px;" href="{{url('template/detail')}}/'+value.id+'">'+
 							'<i class="fa fa-eye"></i></a>'+
 							'<a class="info" href="'+value.link+'" target="_blank">'+
