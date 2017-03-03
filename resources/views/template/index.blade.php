@@ -41,7 +41,9 @@
 
 	<div class="col-md-12" style="box-shadow: 0 0.1px 10px 0 rgba(0, 0, 0, 0.1)">
 		<ul class="navbar" id="filters">
-			<li class="logo-nav"><a href="{{url('/')}}"><b>ITCG</b></a></li>
+			<div class="text-left hidden-sm hidden-xs" style="position: absolute; margin-top: 10px;">
+				<a href="{{url('/')}}" class="logo-nav"><b>ITCG</b></a>
+			</div>
 			<li>
 				<a href="#all" class="filter active" data-filter=".pers, .comp, .trav, .admin, .ac">
 					All Template
