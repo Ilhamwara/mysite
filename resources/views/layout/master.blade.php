@@ -34,9 +34,9 @@
          $(document).scroll(function() { 
           scroll_start = $(this).scrollTop();
           if(scroll_start > offset.top) {
-            $(".navbar-default").css('background-color', '#333');
+            $(".navbar-default").addClass('classnya');
           } else {
-            $('.navbar-default').css('background-color', 'transparent');
+            $('.navbar-default').removeClass('classnya');
           }
         });
        }
