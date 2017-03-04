@@ -183,7 +183,6 @@
 	.btn-purchase:visited{color: #fff;}
 	a:visited{text-decoration: none;}
 	a:link{text-decoration: none;}
-	.template-section{overflow: hidden;}
 	.panel-default{box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.11); border: none;}
 
 	#about{
@@ -214,3 +213,14 @@
 		margin-bottom: 20px;
 	}
 	*, *::after{box-sizing: border-box;}
+	#contact{
+		overflow: hidden;
+		padding: 80px 0px;
+		background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+		radial-gradient(circle closest-side, #FFFFFF 40%, rgba(255,255,255,0) 0) 0 0,
+		radial-gradient(circle closest-side, #FFFFFF 80%, rgba(255,255,255,0) 0) 55px 0 #D6EAF8;
+		background-size:110px 200px;
+		background-repeat:repeat-x;
+	}
+	.btn-send{border:none; padding: 15px 20px; background:#3498db; color: #fff; font-weight: bold;}
+	.form-control{background:#f4f4f4; border-radius: 0px; border:none; box-shadow: none;}

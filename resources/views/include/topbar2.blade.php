@@ -1,29 +1,17 @@
-<style type="text/css">
-  .navbar-default .navbar-toggle{border:none;}
-</style>
-<nav class="navbar navbar-default custom-navbar navbar-fixed-top" id="nav" style="background: #333;">
-  <div class="container-fluid" style="max-width:1000px; ">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
-      <!-- <img class="logo-nav img-responsive" src="{{asset('img/ITCG_logo.svg')}}" width="80" style="margin: 10px;"> -->
-      <a href="{{url('/')}}" class="logo-nav"><b>ITCG</b></a>
-      
-      
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#template">Template</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<div class="col-md-12" style="box-shadow: 0 0.1px 10px 0 rgba(0, 0, 0, 0.1)">
+    <ul class="navbar" id="filters">
+      <div class="text-left hidden-sm hidden-xs" style="position: absolute; margin-top: 10px;">
+        <a href="{{url('/')}}" class="logo-nav"><b>ITCG</b></a>
+      </div>
+      <li>
+        <a href="#all" class="filter active" data-filter=".pers, .comp, .trav, .admin, .ac">
+          All Template
+        </a>
+      </li>
+      <li><a href="#personal" class="filter" data-filter=".pers">Personal</a></li>
+      <li><a href="#comp" class="filter" data-filter=".comp">Company</a></li>
+      <li><a href="#trav" class="filter" data-filter=".trav">Agency Travel</a></li>
+      <li><a href="#admin" class="filter" data-filter=".admin">Admin</a></li>
+      <li><a href="#ac" class="filter" data-filter=".ac">Academic</a></li>
+    </ul>
+  </div>

@@ -199,22 +199,6 @@
 		</div>
 	</div>
 </section>
-<style type="text/css">
-	#contact{
-		overflow: hidden;
-		padding: 80px 0px;
-		/*		background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('{{asset('img/contact.jpeg')}}');*/
-/*		background-attachment: fixed;
-		background-position: center;
-		background-size: cover;*/
-		/*background: #e0efe3;*/
-		background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-		radial-gradient(circle closest-side, #FFFFFF 40%, rgba(255,255,255,0) 0) 0 0,
-		radial-gradient(circle closest-side, #FFFFFF 80%, rgba(255,255,255,0) 0) 55px 0 #f4f4f4;
-		background-size:110px 200px;
-		background-repeat:repeat-x;
-	}
-</style>
 <section id="contact">
 	<div class="container">
 		<div class="wow bounceInDown">
@@ -249,12 +233,6 @@
 								<textarea class="form-control" rows="10" placeholder="Your messages here"></textarea>
 							</div>
 						</div>
-
-						<style type="text/css">
-							.btn-send{border:none; padding: 15px 20px; background:#3498db; color: #fff; font-weight: bold;}
-							.form-control{background:#f4f4f4; border-radius: 0px; border:none; box-shadow: none;}
-						</style>
-
 						<div class="col-md-12">
 							<div class="form-group">
 								<button class="btn-send">Send</button>
@@ -327,15 +305,15 @@
 					if($.isArray(response.data.post)){
 						$.each(response.data.post, function(key, value){
 							var pender = 
-							'<div class="col-md-6">'+
+							'<div class="col-md-4">'+
 							'<div class="box-img-port hovereffect">'+
 							'<img src="{{asset('img')}}/template/'+value.gambar+'" class="img-responsive">'+
 							'<div class="overlay">'+
 							'<h2>'+value.nama+'</h2>'+
-							'<a class="info" style="margin-right:5px;" href="{{url('portfolio/detail')}}/'+value.id+'">'+
-							'<i class="fa fa-eye"></i></a>'+
+							'<a class="info" style="margin-right:5px;" href="{{url('template/detail')}}/'+value.id+'">'+
+							'Detail</a>'+
 							'<a class="info" href="'+value.link+'" target="_blank">'+
-							'<i class="fa fa-globe"></i></a>'+
+							'Demo</a>'+
 							'</div>'+
 							'</div>'+
 							'</div>';
