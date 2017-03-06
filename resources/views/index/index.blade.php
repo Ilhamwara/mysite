@@ -214,23 +214,26 @@
 						</p>
 					</div>
 					<br>
-					<form>
+					@include('include.alert')
+					<br>
+					<form action="{{url('sendmail-contact')}}" method="POST">
 						<div class="col-md-6">
+						{{csrf_field()}}
 							<div class="form-group">
 								<label>Name <sup class="text-danger">*</sup></label>
-								<input type="text" class="form-control" placeholder="Your name" required>
+								<input type="text" class="form-control" placeholder="Your name" name="nama">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Email <sup class="text-danger">*</sup></label>
-								<input type="email" class="form-control" placeholder="Your email" required>
+								<input type="email" class="form-control" placeholder="Your email" name="email">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
 								<label>Message <sup class="text-danger">*</sup></label>
-								<textarea class="form-control" rows="10" placeholder="Your messages here"></textarea>
+								<textarea class="form-control" rows="10" placeholder="Your messages here" name="pesan"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">

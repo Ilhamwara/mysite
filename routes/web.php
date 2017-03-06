@@ -20,3 +20,6 @@ Route::post('proses-tambah','TemplateController@prosestambah');
 Route::get('template/detail/{id}','TemplateController@detail');
 Route::get('template/loadmore/{take?}/{skip?}','TemplateController@loadmore');
 Route::get('portfolio/loadmore/{take?}/{skip?}','TemplateController@loadmoreportfolio');
+
+//MAIL
+Route::post('sendmail-contact','SendMailController@contactmail');
