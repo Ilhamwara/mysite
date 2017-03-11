@@ -20,7 +20,10 @@
 		padding: 155px 0px;
 		background-attachment: fixed;
 	}
-	.title-caption{width: 700px; margin: 30px auto; color: #fff; font-size: 18px; letter-spacing: 0.5px; opacity: 0.5;}
+	.title-caption{margin: 30px auto; color: #fff; font-size: 18px; letter-spacing: 0.5px; opacity: 0.5;}
+	@media screen and (min-width:776px){
+		.title-caption{width: 700px!important;}
+	}
 	.gett-started{background:#1abc9c; color: #fff; padding: 20px;font-weight: bold; font-size: 17px;}
 	.gett-started:hover{color: #fff; text-decoration: none;}
 	.second-section{overflow: hidden; padding: 80px 0px;}

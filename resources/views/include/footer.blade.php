@@ -26,8 +26,8 @@
 	<div class="col-md-12 text-center">
 		<h5>Indonesia</h5>
 		<h5>Jl Madukara Halim, Jakarta</h5>
-		<h5>Ilhamwara@gmail.com / Mail</h5>
+		<h5>creative-g@gmail.com / Mail</h5>
 		<h5>+62-813-1645-3130 / Whatsapp</h5>
-		<h5>Created by Ilham Wara Nugroho  - <?php echo date('Y'); ?></h5>
+		<h5>Created by Creative-g  - <?php echo date('Y'); ?></h5>
 	</div>
 </section>

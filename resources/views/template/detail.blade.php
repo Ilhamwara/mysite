@@ -16,6 +16,12 @@
 		font-size: 40px; 
 		color: #fff; 
 	}
+	a{
+		color: #fff;
+	}
+	a:hover{
+		color: #fff;
+	}
 </style>
 @endsection
 @section('content')
@@ -25,10 +31,12 @@
 			<div class="wow fadeInDown">
 				<h2>"Creativity is just connecting things"</h2>
 				<small><b>-Steve Jobs</b></small>
+				<p>
+					<a href="{{url('/')}}" class="text-default">Home</a> / <a href="{{url('template')}}" class="text-default">Template</a> / <span class="text-default">{{$data->nama}}</span>
+				</p>
 			</div>
 		</div>
 	</div>
-	@include('include.topbar2')
 	<div class="container">
 		<div class="col-md-12" style="padding: 40px 0px;">
 			<div class="col-md-8">

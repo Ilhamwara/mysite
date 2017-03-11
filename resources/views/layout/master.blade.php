@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mysite</title>
+  <title>IT Creative-G Agency</title>
+  <link rel="icon" href="{{asset('img/logo2.png')}}" type="image/png" sizes="16x16">
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
